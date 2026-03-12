@@ -9,10 +9,9 @@ public class Organization{
    }
 
    public string LookUpBranding(bool includeYearEstablished){
-      if (includeYearEstablished){
-         return $"{Name} est. {YearEstablished}";
-      } else {
-         return Name;
-      }
+
+      Name = includeYearEstablished ? $"{Name} est. {YearEstablished}" :  Name;
+
+      return Name;
    }
 }
